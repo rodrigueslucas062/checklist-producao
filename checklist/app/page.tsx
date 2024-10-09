@@ -1,9 +1,37 @@
+"use client";
+
 import { checklistItems } from "@/app/utils/ckecklists";
+import { useState } from "react";
 
 export default function Home() {
+  const [checkedItems, setCheckedItems] = useState({});
+
+  const handleCheckboxChange = (id: any) => {
+    setCheckedItems((prev: any) => ({
+      ...prev,
+      [id]: !prev[id],
+    }));
+  };
+
+  const totalItems = checklistItems.reduce(
+    (total, group) => total + group.items.length,
+    0
+  );
+  const checkedCount = Object.values(checkedItems).filter(Boolean).length;
+  const progress = (checkedCount / totalItems) * 100;
+
   return (
     <div className="flex flex-col justify-center items-center">
       <div className="space-y-4 py-12">
+        <div className="sticky bottom-4 w-full ">
+          <div className="h-4 bg-gray-300 rounded-full">
+            <div
+              className={`h-full bg-indigo-500 rounded-full w-[${progress}%]`}
+              style={{ width: `${progress}%` }}
+            />
+          </div>
+          <p className="text-center mt-2">{Math.round(progress)}% concluído</p>
+        </div>
         {checklistItems.map((group, index) => (
           <div key={index} className="space-y-2">
             <h2 className="font-semibold text-2xl">{group.category}</h2>
@@ -18,6 +46,7 @@ export default function Home() {
                     id={item.text}
                     value=""
                     className="size-4 appearance-none border cursor-pointer border-gray-300  rounded-md mr-2 hover:border-indigo-500 checked:bg-no-repeat checked:bg-center checked:border-indigo-500 checked:bg-indigo-100"
+                    onChange={() => handleCheckboxChange(item.text)}
                   />
                   {item.text}
                 </label>
