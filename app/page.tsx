@@ -4,10 +4,12 @@ import { checklistItems } from "@/app/utils/ckecklists";
 import { useState } from "react";
 
 export default function Home() {
-  const [checkedItems, setCheckedItems] = useState({});
+  const [checkedItems, setCheckedItems] = useState<{ [key: string]: boolean }>(
+    {}
+  );
 
-  const handleCheckboxChange = (id: any) => {
-    setCheckedItems((prev: any) => ({
+  const handleCheckboxChange = (id: string) => {
+    setCheckedItems((prev) => ({
       ...prev,
       [id]: !prev[id],
     }));
@@ -36,7 +38,7 @@ export default function Home() {
           <div key={index} className="space-y-2">
             <h2 className="font-semibold text-2xl">{group.category}</h2>
             {group.items.map((item) => (
-              <div key={index} className="flex flex-col space-y-2">
+              <div key={item.text} className="flex flex-col space-y-2">
                 <label
                   htmlFor={item.text}
                   className="flex cursor-pointer items-center"
