@@ -1,6 +1,6 @@
 export const checklistItems = [
     {
-        category: "Verificação de Bugs :",
+        category: "Verificação de Bugs:",
         items: [
             {
                 text: "Todos os bugs conhecidos foram corrigidos?",
@@ -13,7 +13,7 @@ export const checklistItems = [
         ]
     },
     {
-        category: "Responsividade :",
+        category: "Responsividade:",
         items: [
             {
                 text: "O design foi testado em diferentes dispositivos (desktop, tablet, mobile)?",
@@ -26,7 +26,7 @@ export const checklistItems = [
         ]
     },
     {
-        category: "Acessibilidade :",
+        category: "Acessibilidade:",
         items: [
             {
                 text: "As diretrizes de acessibilidade (WCAG) foram seguidas?",
@@ -43,7 +43,7 @@ export const checklistItems = [
         ]
     },
     {
-        category: "Performance :",
+        category: "Performance:",
         items: [
             {
                 text: "As imagens estão otimizadas?",
@@ -60,7 +60,7 @@ export const checklistItems = [
         ]
     },
     {
-        category: "Compatibilidade de Navegadores :",
+        category: "Compatibilidade de Navegadores:",
         items: [
             {
                 text: "O site foi testado em navegadores diferentes (Chrome, Firefox, Safari, etc.)?",
@@ -73,7 +73,7 @@ export const checklistItems = [
         ]
     },
     {
-        category: "Código Limpo e Organizado :",
+        category: "Código Limpo e Organizado:",
         items: [
             {
                 text: "O código foi revisado para remoção de código não utilizado?",
@@ -90,7 +90,7 @@ export const checklistItems = [
         ]
     },
     {
-        category: "Controle de Versão :",
+        category: "Controle de Versão:",
         items: [
             {
                 text: "Os commits foram feitos de forma clara e descritiva?",
@@ -103,7 +103,7 @@ export const checklistItems = [
         ]
     },
     {
-        category: "Testes :",
+        category: "Testes:",
         items: [
             {
                 text: "Testes unitários foram escritos e executados?",
@@ -116,7 +116,7 @@ export const checklistItems = [
         ]
     },
     {
-        category: "Documentação :",
+        category: "Documentação:",
         items: [
             {
                 text: "A documentação do código foi atualizada, se necessário?",
@@ -129,7 +129,7 @@ export const checklistItems = [
         ]
     },
     {
-        category: "Revisão de Código :",
+        category: "Revisão de Código:",
         items: [
             {
                 text: "O código foi revisado por pelo menos um colega (pull request)?",
@@ -142,7 +142,7 @@ export const checklistItems = [
         ]
     },
     {
-        category: "Backup e Versionamento :",
+        category: "Backup e Versionamento:",
         items: [
             {
                 text: "Um backup do código atual foi feito antes do deployment?",
@@ -155,7 +155,7 @@ export const checklistItems = [
         ]
     },
     {
-        category: "Configuração de Ambiente :",
+        category: "Configuração de Ambiente:",
         items: [
             {
                 text: "As variáveis de ambiente estão configuradas corretamente?",
@@ -168,7 +168,7 @@ export const checklistItems = [
         ]
     },
     {
-        category: "Conclusão :",
+        category: "Conclusão:",
         items: [
             {
                 text: "Tudo foi verificado e está pronto para produção?",
